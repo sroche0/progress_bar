@@ -5,7 +5,7 @@ class Bar:
     def __init__(self, total):
         self.last = 0
         self.total = total
-        print '{}{}    Progress    {}{}'.format(' ' * 10, '*' * 20, '*' * 20, ' ' * 10)
+        print '\n{}{}    Progress    {}{}'.format(' ' * 10, '*' * 20, '*' * 20, ' ' * 10)
         print
         print ' 0% {} 25% {} 50% {} 75% {} 100%'.format(' ' * 13, ' ' * 14, ' ' * 14, ' ' * 11)
         print '-' * 77, '\n[',
