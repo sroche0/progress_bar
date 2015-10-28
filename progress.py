@@ -13,20 +13,17 @@ class Bar:
 
     def update(self, current):
         status = float(current) / float(self.total) * 100 * .75
-        # print status
-        # if status % 100 == 0:
         if int(status) != self.last:
             if self.total >= 100:
                 sys.stdout.write('#')
                 sys.stdout.flush()
-                self.last = int(status)
             else:
                 progress = int(75 * (float(current) / float(self.total)))
                 sys.stdout.write('#' * (progress - self.done))
                 sys.stdout.flush()
                 self.done = progress
-
-                print progress
+                
+            self.last = int(status)
 
         if current + 1 == self.total:
             print '#' * (75 - self.done), ']'
