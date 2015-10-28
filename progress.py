@@ -20,7 +20,7 @@ class Bar:
                 sys.stdout.flush()
                 self.last = int(status)
             else:
-                progress = int(74 * status)
+                progress = int(74 * (float(current) / float(self.total)))
                 print progress
 
         if current + 1 == self.total:
