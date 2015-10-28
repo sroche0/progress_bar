@@ -17,7 +17,7 @@ class Bar:
         if status != self.last:
             progress = status - self.last
             if progress > 1:
-                progress = int(self.total / progress * .75)
+                progress = int(progress / 75 * 100)
             sys.stdout.write('#' * progress)
             sys.stdout.flush()
             self.last = int(status)
