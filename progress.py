@@ -7,7 +7,7 @@ class Bar:
         self.total = total
         print '{}{}    Progress    {}{}'.format(' ' * 10, '*' * 20, '*' * 20, ' ' * 10)
         print
-        print ' 0% {} 25% {} 50% {} 75% {} 100%'.format(' ' * 13, ' ' * 14, ' ' * 14, ' ' * 11),
+        print ' 0% {} 25% {} 50% {} 75% {} 100%'.format(' ' * 13, ' ' * 14, ' ' * 14, ' ' * 11)
         print '-' * 76, '\n['
 
     def update(self, current):
