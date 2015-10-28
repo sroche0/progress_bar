@@ -8,7 +8,7 @@ class Bar:
         print '{}{}    Progress    {}{}'.format(' ' * 10, '*' * 20, '*' * 20, ' ' * 10)
         print
         print ' 0% {} 25% {} 50% {} 75% {} 100%'.format(' ' * 13, ' ' * 14, ' ' * 14, ' ' * 11)
-        print '-' * 76, '\n['
+        print '-' * 76, '\n[',
 
     def update(self, current):
         status = int(float(current) / float(self.total) * 100 * .75)
