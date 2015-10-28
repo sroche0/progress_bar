@@ -15,7 +15,10 @@ class Bar:
         # print status
         # if status % 100 == 0:
         if status != self.last:
-            sys.stdout.write('#')
+            progress = status - self.last
+            if progress > 1:
+                progress = int(progress * .75)
+            sys.stdout.write('#' * progress)
             sys.stdout.flush()
             self.last = int(status)
 
