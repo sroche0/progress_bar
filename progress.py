@@ -11,16 +11,17 @@ class Bar:
         print '-' * 77, '\n[',
 
     def update(self, current):
-        status = int(float(current) / float(self.total) * 100 * .75)
+        status = float(current) / float(self.total) * 100 * .75
         # print status
         # if status % 100 == 0:
-        if status != self.last:
-            progress = status - self.last
-            if progress > 1:
-                progress = int(progress / 75 * 100)
-            sys.stdout.write('#' * progress)
-            sys.stdout.flush()
-            self.last = int(status)
+        if int(status) != self.last:
+            if self.total >= 100:
+                sys.stdout.write('#')
+                sys.stdout.flush()
+                self.last = int(status)
+            else:
+                progress = int(74 * status)
+                print progress
 
         if current + 1 == self.total:
             print '#]'
