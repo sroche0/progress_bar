@@ -9,7 +9,7 @@ class Bar:
         print '', '-' * 75
         print '|0% {} 25% {} 50% {} 75% {} 100%|'.format(' ' * 13, ' ' * 14, ' ' * 14, ' ' * 11)
         print '{}{}{}'.format('|', '-' * 75, '|')
-        print ' '
+        print ' ',
 
     def update(self, current):
         status = int(float(current) / float(self.total) * 75)
