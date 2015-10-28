@@ -5,10 +5,10 @@ class Bar:
     def __init__(self, total):
         self.done = 0
         self.total = total
-        print '\n{}{}    Progress    {}{}'.format(' ' * 10, '*' * 20, '*' * 20, ' ' * 10)
-        print
-        print ' 0% {} 25% {} 50% {} 75% {} 100%'.format(' ' * 13, ' ' * 14, ' ' * 14, ' ' * 11)
-        print '-' * 77, '\n[',
+        print '\n{}{}    Deleting    {}{}'.format(' ' * 25, '*' * 5, '*' * 5, ' ' * 25)
+        print '-' * 79
+        print '| 0% {} 25% {} 50% {} 75% {} 100% |'.format(' ' * 13, ' ' * 14, ' ' * 14, ' ' * 11)
+        print '-' * 79, '\n[',
 
     def update(self, current):
         status = int(float(current) / float(self.total) * 75)
