@@ -4,6 +4,7 @@ import sys
 class Bar:
     def __init__(self, total):
         self.last = 0
+        self.done = 0
         self.total = total
         print '\n{}{}    Progress    {}{}'.format(' ' * 10, '*' * 20, '*' * 20, ' ' * 10)
         print
@@ -20,8 +21,12 @@ class Bar:
                 sys.stdout.flush()
                 self.last = int(status)
             else:
-                progress = int(74 * (float(current) / float(self.total)))
+                progress = int(75 * (float(current) / float(self.total)))
+                sys.stdout.write('#' * (progress - self.done))
+                sys.stdout.flush()
+                self.done = progress
+
                 print progress
 
         if current + 1 == self.total:
-            print '#]'
+            print '#' * (75 - self.done), ']'
