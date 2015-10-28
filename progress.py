@@ -9,7 +9,7 @@ class Bar:
         print '', '-' * 77
         print '| 0% {} 25% {} 50% {} 75% {} 100% |'.format(' ' * 13, ' ' * 14, ' ' * 14, ' ' * 11)
         print '{}{}{}'.format('|', '-' * 77, '|')
-        print '|',
+        print '| ',
 
     def update(self, current):
         status = int(float(current) / float(self.total) * 75)
@@ -19,4 +19,4 @@ class Bar:
             self.done = status
 
         if current + 1 == self.total:
-            print '{}{}'.format('#' * (75 - self.done), '|')
+            print '{} {}'.format('#' * (75 - self.done), '|')
