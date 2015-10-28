@@ -22,8 +22,8 @@ class Bar:
                 sys.stdout.write('#' * (progress - self.done))
                 sys.stdout.flush()
                 self.done = progress
-                
+
             self.last = int(status)
 
         if current + 1 == self.total:
-            print '#' * (75 - self.done), ']'
+            print '{}{}'.format('#' * (75 - self.done), ']')
