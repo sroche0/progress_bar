@@ -2,8 +2,8 @@ import progress
 import time
 
 
-total = 10
-bar = progress.Bar(total)
+total = 22
+bar = progress.Bar(total, 45)
 
 for i in range(total):
     bar.update(i)
