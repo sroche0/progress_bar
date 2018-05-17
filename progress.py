@@ -24,9 +24,14 @@ class Bar:
         self.total = total
 
         q = int((self.width - self.width % 4) / 4)
-        leftover = self.width % 4
-        marker = '|'.ljust(q - 1)
-        print('{}{}{}{}{}'.format('0'.ljust(q), marker, marker, marker, '100'.rjust(3 + leftover)))
+        marker = '|'.ljust(q - 1, '-')
+        print('{}{}{}{}{}'.format(
+            '0 '.ljust(q - 1, '-'),
+            marker,
+            marker,
+            marker,
+            ' 100'.rjust(4 + self.width % 4, '-'))
+        )
 
     def update(self, current):
         status = int(float(current) / float(self.total) * self.width)
