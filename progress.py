@@ -1,7 +1,6 @@
 import sys
 import subprocess
 
-
 class Bar:
     def __init__(self, total, width=0):
         """
@@ -25,20 +24,21 @@ class Bar:
 
         q = int((self.width - self.width % 4) / 4)
         marker = '|'.ljust(q - 1, '-')
-        print('{}{}{}{}{}'.format(
+        header = '{}{}{}{}{}\n'.format(
             '0 '.ljust(q - 1, '-'),
             marker,
             marker,
             marker,
             ' 100'.rjust(4 + self.width % 4, '-'))
-        )
+        sys.stderr.write(header)
+        sys.stderr.flush()
 
     def update(self, current):
         status = int(float(current) / float(self.total) * self.width)
         if status != self.done:
-            sys.stdout.write('#' * (status - self.done))
-            sys.stdout.flush()
+            sys.stderr.write('#' * (status - self.done))
+            sys.stderr.flush()
             self.done = status
 
-        if current + 1 == self.total:
+        if current == self.total:
             print('{}\n'.format('#' * (self.width - self.done)))
