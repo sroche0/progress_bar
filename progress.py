@@ -1,6 +1,7 @@
 import sys
 import subprocess
 
+
 class Bar:
     def __init__(self, total, width=0):
         """
