@@ -12,6 +12,8 @@ Creates a progress bar object. Width can be manually defined if desired. Default
 ```
 from libs.output import Bar
 import time
+
+
 total = 22
 progress_bar = Bar(total, 45)
 for i in range(total):
@@ -23,6 +25,8 @@ for i in range(total):
 ```
 from libs.output import Bar
 import time
+
+
 total = 2137
 progress_bar = Bar(total, 45)
 for i in range(total):
