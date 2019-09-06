@@ -10,7 +10,7 @@ Creates a progress bar object. Width can be manually defined if desired. Default
 ## Samples
 ### Basic usage
 ```
-from libs.output import Bar
+from progress import Bar
 import time
 
 
@@ -23,7 +23,7 @@ for i in range(total):
 
 ### With iteration caching
 ```
-from libs.output import Bar
+from progress import Bar
 import time
 
 
